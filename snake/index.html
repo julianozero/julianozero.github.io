@@ -4,13 +4,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="utf-8" />
 
   </head>
   <body>
-		<script src="food.js"></script>
-		<script src="snake.js"></script>
-    <script src="sketch.js"></script>
+		<script src="js/record.js"></script>
+		<script src="js/score.js"></script>
+		<script src="js/food.js"></script>
+		<script src="js/snake.js"></script>
+    <script src="js/sketch.js"></script>
+    <div id="divScore">Score: <span id="score"></span></div>
+    <div id="divRecord">Your record: <span id="record"></span></div>
+    <div id="divDirection">
+      <img id="arrowKeys" src="images/arrowKeys.png" usemap="#Map"/>
+      <map name="Map" id="Map">
+          <area id="mapUp" alt="up" title="up" shape="rect" coords="123,5,219,107" onclick="snake.moveUp();" />
+          <area id="mapLeft" alt="left" title="left" shape="rect" coords="15,117,111,216" onclick="snake.moveLeft();" />
+          <area id="mapDown" alt="down" title="down" shape="rect" coords="124,120,215,218" onclick="snake.moveDown();" />
+          <area id="mapRight" alt="right" title="right" shape="rect" coords="231,119,321,215" onclick="snake.moveRight();" />
+      </map>
+    </div>
   </body>
 </html>
