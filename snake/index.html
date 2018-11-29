@@ -8,22 +8,21 @@
     <meta charset="utf-8" />
 
   </head>
-  <body>
-		<script src="js/record.js"></script>
-		<script src="js/score.js"></script>
-		<script src="js/food.js"></script>
-		<script src="js/snake.js"></script>
-    <script src="js/sketch.js"></script>
+  <body onload="verifyMobile();">
+
     <div id="divScore">Score: <span id="score"></span></div>
     <div id="divRecord">Your record: <span id="record"></span></div>
     <div id="divDirection">
-      <img id="arrowKeys" src="images/arrowKeys.png" usemap="#Map"/>
-      <map name="Map" id="Map">
-          <area id="mapUp" alt="up" title="up" shape="rect" coords="123,5,219,107" onclick="snake.moveUp();" />
-          <area id="mapLeft" alt="left" title="left" shape="rect" coords="15,117,111,216" onclick="snake.moveLeft();" />
-          <area id="mapDown" alt="down" title="down" shape="rect" coords="124,120,215,218" onclick="snake.moveDown();" />
-          <area id="mapRight" alt="right" title="right" shape="rect" coords="231,119,321,215" onclick="snake.moveRight();" />
-      </map>
+        <img id="up" src="images/up.png" onclick="snake.moveUp();" />
+        <img id="down" src="images/down.png" onclick="snake.moveDown();" />
+        <img id="left" src="images/left.png" onclick="snake.moveLeft();" />
+        <img id="right" src="images/right.png" onclick="snake.moveRight();" />
     </div>
   </body>
 </html>
+<script src="js/record.js"></script>
+<script src="js/score.js"></script>
+<script src="js/food.js"></script>
+<script src="js/snake.js"></script>
+<script src="js/sketch.js"></script>
+<script src="js/functions.js"></script>

@@ -24,12 +24,39 @@ canvas {
   font-size: 20px;
   text-align: center;
 }
-#arrowKeys {
+#up {
   display: block;
-  position: absolute;
-  top: 900px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
+  position: absolute;
+  top: 700px;
+}
+#down {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 1150px;
+}
+#right {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  left: 600px;
+  right: 0;
+  position: absolute;
+  top: 900px;
+}
+#left {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 600px;
+  position: absolute;
+  top: 900px;
 }

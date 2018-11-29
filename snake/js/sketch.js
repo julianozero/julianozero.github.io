@@ -4,7 +4,7 @@ var score;
 var record;
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(800, 600);
 	snake = new snake();
 	food = new food(random(width-50), random(height-50));
 	score = new score();
