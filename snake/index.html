@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="utf-8" />
   </head>
   <body onload="verifyMobile();">
     <div id="divScore">Score: <span id="score"></span></div>
     <div id="divRecord">Your record: <span id="record"></span></div>
+    <div id="divSnake"><img id="snake" src="images/snake.png"></div>
     <div id="divDirection">
         <div class="box" id="up" onclick="snake.moveUp();"> <span></span> </div>
         <div class="box" id="down" onclick="snake.moveDown();"> <span></span> </div>
         <div class="box" id="left" onclick="snake.moveLeft();"> <span></span> </div>
         <div class="box" id="right" onclick="snake.moveRight();"> <span></span> </div>
-        <div id="divSnake"><img id="snake" src="images/snake.png"></div>
     </div>
   </body>
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
 <script src="js/record.js"></script>
 <script src="js/score.js"></script>
 <script src="js/food.js"></script>

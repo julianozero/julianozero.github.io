@@ -1,7 +1,7 @@
 function snake() {
 	this.x = 20;
 	this.y = 20;
-	this.r = 14;
+	this.r = 25;
 	this.speed = 6;
 	this.xspeed = this.speed;
 	this.yspeed = 0;
@@ -15,7 +15,7 @@ function snake() {
 	this.start = function(score, record) {
 		this.x = 20;
 		this.y = 20;
-		this.r = 14;
+		this.r = 25;
 		this.speed = 6;
 		this.xspeed = this.speed;
 		this.yspeed = 0;
