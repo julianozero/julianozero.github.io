@@ -61,33 +61,33 @@ function snake() {
 
 	this.moveUp = function() {
 		if (!this.down) {
+			this.changeSpeed(0, -this.speed);
 			this.up = true;
 			this.down = this.right = this.left = false;
-			this.changeSpeed(0, -this.speed);
 		}
 	}
 
 	this.moveDown = function() {
 		if (!this.up) {
+			this.changeSpeed(0, this.speed);
 			this.down = true;
 			this.up = this.right = this.left = false;
-			this.changeSpeed(0, this.speed);
 		}
 	}
 
 	this.moveRight = function() {
 		if (!this.left) {
+			this.changeSpeed(this.speed, 0);
 			this.right = true;
 			this.down = this.up = this.left = false;
-			this.changeSpeed(this.speed, 0);
 		}
 	}
 
 	this.moveLeft = function() {
 		if (!this.right) {
+			this.changeSpeed(-this.speed, 0);
 			this.left = true;
 			this.down = this.right = this.up = false;
-			this.changeSpeed(-this.speed, 0);
 		}
 	}
 
