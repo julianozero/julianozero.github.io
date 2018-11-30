@@ -1,7 +1,14 @@
-function snake() {
+var food;
+var score;
+var record;
+
+function snake(food, score, record) {
+	this.food = food;
+	this.score = score;
+	this.record = record;
 	this.x = 20;
 	this.y = 20;
-	this.r = 14;
+	this.r = 25;
 	this.speed = 6;
 	this.xspeed = this.speed;
 	this.yspeed = 0;
@@ -12,10 +19,10 @@ function snake() {
 	this.up = false;
 	this.down = false;
 
-	this.start = function(score, record) {
+	this.start = function() {
 		this.x = 20;
 		this.y = 20;
-		this.r = 14;
+		this.r = 25;
 		this.speed = 6;
 		this.xspeed = this.speed;
 		this.yspeed = 0;
@@ -25,8 +32,8 @@ function snake() {
 		this.left = false;
 		this.up = false;
 		this.down = false;
-		this.updateRecord(score, record);
-		this.reset(score);
+		this.updateRecord();
+		this.reset();
 	}
 
 	this.show = function() {
@@ -96,39 +103,39 @@ function snake() {
 		this.yspeed = yspeed;
 	}
 
-	this.eat = function(food, score) {
-		var d = dist(this.x, this.y, food.x, food.y);
+	this.eat = function() {
+		var d = dist(this.x, this.y, this.food.x, this.food.y);
 		if (d <= this.r) {
 			this.grow();
-			food.eaten();
-			this.update(score);
+			this.food.eaten();
+			this.update(this.score);
 		}
 	}
 
-	this.update = function(score) {
-		score.value++;
+	this.update = function() {
+		this.score.value++;
 	}
 
-	this.reset = function(score) {
-		score.value = 0;
+	this.reset = function() {
+		this.score.value = 0;
 	}
 
-	this.end = function(score, record) {
+	this.end = function() {
 		if (this.x >= width || this.x <= 0 ||
 			this.y >= height || this.y <= 0) {
-			this.start(score, record);
+			this.start();
 		}
 		for (var i = 0; i <= this.tail.length - 1; i++) {
 			var d = dist(this.x, this.y, this.tail[i].x, this.tail[i].y);
 			if (d <= 1) {
-				this.start(score, record);
+				this.start();
 			}
 		}
 	}
 
-	this.updateRecord = function(score, record) {
-		if (score.value > record.value) {
-			record.value = score.value;
+	this.updateRecord = function() {
+		if (this.score.value > this.record.value) {
+			this.record.value = this.score.value;
 		}
 	}
 

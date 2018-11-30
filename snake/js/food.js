@@ -1,7 +1,7 @@
 function food(x, y) {
 	this.x = x;
 	this.y = y;
-	this.r = 10;
+	this.r = 22;
 	
 	this.show = function() {
 		fill(255, 204, 0);
